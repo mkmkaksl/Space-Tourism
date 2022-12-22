@@ -1,0 +1,364 @@
+/*
+license: Freeware, Non-Commercial
+link: https://www.fontspace.com/astrobia-font-f31420
+*/
+/*Imports new font */
+@font-face {
+    font-family: "Astrobia";
+    src: url("./Fonts/Astrobia-K47W.ttf");
+    src: url("./Fonts/Astrobia-X8zg.otf");
+} /* Font Astrobia demo version */
+
+/*Variables*/
+:root {
+  /*The font size of the nav links*/
+    --font-size-nav: 2rem;
+
+  /*The gap between each navbar link  */
+    --nav-gap: 2em;
+
+  /*Navbar padding*/
+    --nav-padding: 0.7em;
+
+  /*Main text font size*/
+    --font-size-main: 3rem;
+}
+
+/*Media Queries*/
+/*Media Query for screen between 1264 - 1583 px wide (inclusive)*/
+@media (max-width: 1583px) and (min-width: 1264px)
+{
+    :root {
+        --font-size-nav: 1.75rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+
+        --font-size-main: 2.5rem;
+    }
+}
+
+/*Media Query for screen between 1126 - 1263 px wide (inclusive)*/
+@media (max-width: 1263px) and (min-width: 1126px)
+{
+    :root {
+        --font-size-nav: 1.5rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+        
+        --font-size-main: 2.25rem;
+    }
+}
+
+/*Media Query for screen between 857 - 1125 px wide (inclusive)*/
+@media (max-width: 1125px) and (min-width: 857px)
+{
+    :root {
+        --font-size-nav: 1.5rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+        --font-size-main: 1.75rem;
+    }
+}
+
+/*Media Query for screen between 361 - 856 px wide (inclusive)*/
+@media (max-width: 856px) and (min-width: 361px)
+{
+    :root {
+        --font-size-nav: 1.25rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+        --font-size-main: 1.5rem;
+    }
+}
+
+/*Media Query for screen between 360 > px wide (inclusive)*/
+@media (max-width: 360px)
+{
+    :root {
+        --font-size-nav: 1rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+        --font-size-main: 1rem;
+    }
+}
+
+
+/*Utility Classes*/
+.bold {
+    font-weight: bold;
+}
+.active {
+    color: yellow;
+    text-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
+}
+
+/*General Rules*/
+*, *::before, *::after {
+    font-family: Astrobia, monospace, sans-serif;
+    font-weight: light;
+    color: white;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+/*Nav bar rules */
+nav {
+    width: 80vw;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 0px 0px 5px red;
+}
+/*Makes sure that the normal navbar and smaller navbar with all the links look the same*/
+.nav-left, .nav-connected {
+    display: flex;
+    font-size: var(--font-size-nav);
+    gap: var(--nav-gap);
+    background: url("./Images/starry-bg.jpg");
+    object-fit: cover;
+    border: 4px solid #0062BD;
+    border-radius: 7em;
+    padding: var(--nav-padding);
+    position: relative;
+}
+.nav-right {
+    font-size: var(--font-size-nav);
+    background: url("./Images/starry-bg.jpg");
+    object-fit: cover;
+    border: 4px solid #0062BD;
+    border-radius: 7em;
+    padding: var(--nav-padding);
+    position: relative;
+}
+
+.nav--main-links {
+  position: relative;
+}
+
+.nav--hover-links {
+  display: none;
+  text-align: center;
+  
+}
+.nav--secondary-links {
+  padding: 0.8em;
+  width: max-content;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background: url("./Images/starry-bg.jpg");
+  transition: all linear 500ms;
+  z-index: 5;
+}
+
+
+/*This nav has all the links and will only show up 
+using the media query below on smaller devices*/
+.nav-connected {
+    display: none;
+    transition: height linear 500ms;
+}
+.three-line-sm-bar {
+    display: none;
+}
+
+/* Media query for small devices where the hyperlinks
+will show up only when the user hovers on the NAV*/
+@media (max-width: 1125px)
+{
+    :root {
+        --nav-gap: 1em;
+    }
+    .nav-left, .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        transition: display linear 500ms, height linear 500ms;
+    }
+    .nav-left a, .nav-right a {
+        width: max-content;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+    }
+    .nav-connected .nav--main-links {
+      position: relative;
+    }
+    .nav-connected .nav--hover-links {
+      position: absolute;
+      top: 0;
+      left: 120%;
+      z-index: 5;
+    }
+  
+  /*Makes sure only the nav bar shows up*/
+    nav {
+        width: 90vw;
+        margin: 0 auto;
+        height: 10vh;
+        border: 4px solid #0062BD;
+        border-radius: 7em;
+        background: url("./Images/starry-bg.jpg");
+        object-fit: cover;
+        display: flex;
+        justify-content: end;
+        padding: 30px;
+    }
+    nav .three-line-sm-bar {
+        display: inline;
+        width: 60px;
+        height: 50px;
+    }
+  /*When hovering on nav bar, make the nav and three lines disappear and the connected nav bar appear*/
+    nav:hover, :focus {
+        background: none;
+        border: none;
+    }
+    nav:hover .three-line-sm-bar, nav:focus .three-line-sm-bar {
+        display: none;
+    }
+    nav:hover .nav-connected, nav:focus .nav-connected {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        gap: var(--nav-gap);
+    }
+
+
+    nav .nav-connected .nav--main-links:hover > ul > .item-1 {
+      animation: 50ms linear 1 forwards item-10;
+    }
+    nav .nav-connected .nav--main-links:hover > ul > .item-2 {
+      animation: 200ms linear 1 forwards item-20;
+    }
+    nav .nav-connected .nav--main-links:hover > ul > .item-3 {
+      animation: 400ms linear 1 forwards item-30;
+    }
+    @keyframes item-10 {
+      to {
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes item-20 {
+      to {
+        transform: translateY(40px);
+      }
+    }
+    @keyframes item-30 {
+      to {
+        transform: translateY(100px);
+      }
+    }
+}
+nav li {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    position: relative;
+  /*Glowing shade on the links is due to this*/
+    text-shadow: 1px 1px 10px white,  3px 3px 10px #BBB;
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    width: 0;
+    height: 10%;
+    transition: width linear 250ms;
+}
+nav a.active::before {
+  /*Color of the underline on the active link when you hover */
+  background-color: yellow;
+  box-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
+}
+
+nav a:hover::before, nav a:focus::before{
+    width: 100%;
+}
+
+nav .nav--main-links:hover > ul {
+  display: block;
+} 
+nav .nav--main-links:hover > ul > .item-1 {
+  animation: 100ms linear 1 forwards item-1;
+}
+nav .nav--main-links:hover > ul > .item-2 {
+  animation: 300ms linear 1 forwards item-2;
+}
+nav .nav--main-links:hover > ul > .item-3 {
+  animation: 500ms linear 1 forwards item-3;
+}
+@keyframes item-1 {
+  to {
+    transform: translateY(40px);
+  }
+}
+@keyframes item-2 {
+  to {
+    transform: translateY(140px);
+  }
+}
+@keyframes item-3 {
+  to {
+    transform: translateY(240px);
+  }
+}
+/*Main content Rules */
+main {
+    font-size: var(--font-size-main);
+    height: 60vh;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 5px red;
+}
+
+#first-paragraph {
+    width: 60vw;
+    margin: 0;
+    align-self: start;
+}
+#second-paragraph {
+    width: 60vw;
+    margin: 0;
+    align-self: end;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- TODO List:
+  -- Add the dropdown of other links when you hover over the current links: Ex: when you hover over About, there should be a dropdown of the other links as shown in the layout
+  -- Add the footer 
+  -- Finalize the homepage and create a template
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Tourism</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Sets the background video which is styled using CSS -->
+  <div class="bg-video">
+    <video id="bg-video" autoplay loop muted poster="./Images/earth.jpg">
+      <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Header with the nav bar and links -->
+  <header>
+    <nav>
+      <ul class="nav-left">
+        <li class="nav--main-links"><a class="active" href="#">Home</a></li>
+        <li class="nav--main-links"><a href="#">About us</a></li>
+        <li class="nav--main-links"><a href="#">Costs</a></li>
+        <li class="nav--main-links"><a href="#">Stages</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-secondary-link"><a href="#">Registration</a></li>
+      </ul>
+      <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+      <ul class="nav-connected">
+        <li class="nav--main-links"><a class="active" href="#">Home</a></li>
+        <li class="nav--main-links"><a href="#">About us</a></li>
+        <li class="nav--main-links"><a href="#">Costs</a></li>
+        <li class="nav--main-links"><a href="#">Stages</a></li>
+        <li class="nav--main-links"><a href="#">Registration</a></li>
+      </ul>
+      <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Main text -->
+    <h1 id="first-paragraph">Making <span class="bold">you</span> an astronaut</h1>
+    <h1 id="second-paragraph">And Bringing <span class="bold">you</span> to Space.</h1>
+  </main>
+
+  <!-- Still need to add this based on our layout -->
+  <footer>
+    
+  </footer>
+  <!-- Links to JS file. Doesn't do anything yet -->
+  <script src="main.js"></script>
+</body>
+
+</html>
