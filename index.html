@@ -93,7 +93,10 @@
   <script src="main.js"></script>
   <!--Makes sure the backrgound video starts playing cause it doesnt play on my phone otherwise-->
   <script>
-    document.getElementById('bg-video').play();
+    const video = document.getElementById('bg-video')
+    video.addEventListener('loadeddata', function (){
+      video.play()
+    });
   </script>
 
 </body>
