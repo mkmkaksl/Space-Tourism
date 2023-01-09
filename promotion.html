@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- TODO List:
+  -- Add the footer 
+  -- Finalize the homepage and create a template
 
+  
+  NEW COMMENT RIGHT HERE !!!
+  -- Nav bar dropdown inquiry: Whenever the user attempts to click on the link, all 3 links dissapear. I think this occurs due to there being a blank space between 3 of the links, so we should fix that!
+  -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Tourism</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Sets the background video which is styled using CSS -->
-  <div class="bg-video">
-    <video id="bg-video" autoplay loop muted poster="./Images/earth.jpg">
-      <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4">
-    </video>
-  </div>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
 
-  <!-- Header with the nav bar and links -->
+    <!-- Header with the nav bar and links -->
 
-  <header>
+    <header>
 
-    <nav>
-      <ul class="nav-left">
-        <li class="nav--main-links"><a class="active" href="#">Home</a></li>
-        <li class="nav--main-links"><a href="#">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="#">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="training.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facility.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="#">Stages</a></li>
-      </ul>
-      <ul class="nav-right">
-        <li class="nav-secondary-link"><a href="#">Registration</a></li>
-      </ul>
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html" class="active">Promotion</a>
+                        </li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
+            </ul>
 
-      <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
 
 
 
-      <ul class="nav-connected">
-        <li class="nav--main-links"><a class="active" href="#">Home</a></li>
-        <li class="nav--main-links"><a href="#">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="#">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="training.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facility.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="#">Stages</a></li>
-        <li class="nav--main-links"><a href="#">Registration</a></li>
-      </ul>
-      <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
-    </nav>
-  </header>
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html" class="active">Promotion</a>
+                        </li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
 
-  <main id="main">
-    <!-- Main text -->
-    <h1 id="page-titles">Promotion</h1>
+    <main id="main">
+        <!-- Main text -->
+        <h1>Promotion</h1>
+        <section>
+            <div class="text right">
+                <div class="p-1">
+                    <h2>Why choose us:</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum corrupti dignissimos tempore
+                        iste ipsum, nemo debitis enim, ipsa a sequi ad quidem quas natus dolorum reprehenderit
+                        cupiditate eius quam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum corrupti dignissimos tempore
+                        iste ipsum, nemo debitis enim, ipsa a sequi ad quidem quas natus dolorum reprehenderit
+                        cupiditate eius quam.</p>
+                </div>
 
-    <div class = "flyers">
-      <a href = "https://placeholder.com"><img src="https://via.placeholder.com/400x500"></a></div>
-      <p id= "body-text"> Blah blah blah blah blah </p>
-  </main>
+                <div class="p-2">
+                    <h2>Unique Selling Point:</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum corrupti dignissimos tempore
+                        iste ipsum, nemo debitis enim, ipsa a sequi ad quidem quas natus dolorum reprehenderit
+                        cupiditate eius quam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum corrupti dignissimos tempore
+                        iste ipsum, nemo debitis enim, ipsa a sequi ad quidem quas natus dolorum reprehenderit
+                        cupiditate eius quam.</p>
+                </div>
+            </div>
+            <div class="section-img left">
+                <!--This is a placeholder image. We need to change it-->
+                <img class="portrait"
+                    src="https://images.unsplash.com/photo-1659787050050-d5aa2b1ec0dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80"
+                    alt="Placeholder image">
+            </div>
+        </section>
+    </main>
 
-  <!-- Still need to add this based on our layout -->
-  <footer>
+    <!-- Still need to add this based on our layout -->
+    <footer>
 
-  </footer>
-  <!-- Links to JS file. Doesn't do anything yet -->
-  <script src="main.js"></script>
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
+
 </body>
 
 </html>

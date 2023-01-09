@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- TODO List:
+  -- Add the footer 
+  -- Finalize the homepage and create a template
+
+  
+  NEW COMMENT RIGHT HERE !!!
+  -- Nav bar dropdown inquiry: Whenever the user attempts to click on the link, all 3 links dissapear. I think this occurs due to there being a blank space between 3 of the links, so we should fix that! (FIXED)
+  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="imgText.css">
+</head>
+
+<body>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
+
+    <!-- Header with the nav bar and links -->
+
+    <header>
+
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html"
+                                class="active">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
+            </ul>
+
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+
+
+
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html"
+                                class="active">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Main text -->
+        <section>
+            <div class="section-img plan-of-work">
+                <a href="./Documentation/plan-of-work-log.pdf" target="_blank">Plan Of Work Log</a>
+            </div>
+
+            <div class="section-img student-copyright">
+                <a href="./Documentation/copyright-checklist.pdf" target="_blank">Student Copyright Checklist</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-img site-map">
+                <a href="./Documentation/site-map.pdf" target="_blank"> Site Map</a>
+            </div>
+
+            <div class="section-img design-brief">
+                <a href="./Documentation/design-brief.pdf" target="_blank">Design Brief</a>
+            </div>
+        </section>
+        <section>
+            <div class="text">
+                <h1>Citations</h1>
+                <p>Citations</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Still need to add this based on our layout -->
+    <footer>
+
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

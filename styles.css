@@ -7,6 +7,8 @@ link: https://www.fontspace.com/astrobia-font-f31420
     font-family: "Astrobia";
     src: url("./Fonts/Astrobia-K47W.ttf");
     src: url("./Fonts/Astrobia-X8zg.otf");
+    font-weight: 400;
+    font-style: normal;
 } /* Font Astrobia demo version */
 
 /*Variables*/
@@ -26,8 +28,12 @@ link: https://www.fontspace.com/astrobia-font-f31420
     --hover-item-3: 6em;
 
   /*Main text font size*/
+    --f-800: 4rem;
     --font-size-main: 3rem;
-
+    --f-700: 2rem;
+    --f-600: 1.5rem;
+    --f-500: 1.25rem;
+    --f-400: 1rem;
   
 }
 
@@ -51,8 +57,13 @@ link: https://www.fontspace.com/astrobia-font-f31420
         --font-size-nav: 1.5rem;
         --nav-gap: 1.5em;
         --nav-padding: 0.6em;
-        
+
+        --f-800: 3.5rem;
         --font-size-main: 2.25rem;
+        --f-700: 1.75rem;
+        --f-600: 1.4rem;
+        --f-500: 1.15rem;
+        --f-400: 0.9rem;
     }
 }
 
@@ -63,7 +74,13 @@ link: https://www.fontspace.com/astrobia-font-f31420
         --font-size-nav: 1.5rem;
         --nav-gap: 1.5em;
         --nav-padding: 0.6em;
+
+        --f-800: 3rem;
         --font-size-main: 1.75rem;
+        --f-700: 1.6rem;
+        --f-600: 1.4rem;
+        --f-500: 1rem;
+        --f-400: 0.8rem;
     }
 }
 
@@ -74,21 +91,40 @@ link: https://www.fontspace.com/astrobia-font-f31420
         --font-size-nav: 1.25rem;
         --nav-gap: 1.5em;
         --nav-padding: 0.6em;
+
+        --f-800: 2.9rem;
         --font-size-main: 1.5rem;
+        --f-700: 1.6rem;
+        --f-600: 1.4rem;
+        --f-500: 1rem;
+        --f-400: 0.8rem;
+
     }
 }
 @media (max-width: 650px) and (min-width: 481px) {
   :root {
     --font-size-nav: 1rem;
     --nav-gap: 1.5em;
+
+    --f-800: 2.7rem;
     --font-size-main: 1.25rem;
+        --f-700: 1.5rem;
+        --f-600: 1.3rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (min-width: 361px) {
   :root {
     --font-size-nav: 0.8rem;
     --nav-gap: 1.4em;
+
+    --f-800: 2.5rem;
     --font-size-main: 1.2rem;
+        --f-700: 1.4rem;
+        --f-600: 1.2rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
   }
 }
 /*Media Query for screen between 360 > px wide (inclusive)*/
@@ -98,7 +134,12 @@ link: https://www.fontspace.com/astrobia-font-f31420
         --font-size-nav: 0.6rem;
         --nav-gap: 1.3em;
         --nav-padding: 0.5em;
-        --font-size-main: 1 rem;
+        --f-800: 2.3rem;
+        --font-size-main: 1rem;
+        --f-700: 1.4rem;
+        --f-600: 1.2rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
     }
 }
 
@@ -108,8 +149,8 @@ link: https://www.fontspace.com/astrobia-font-f31420
     font-weight: bold;
 }
 .active {
-    color: yellow;
-    text-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
+  color: yellow;
+  text-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
 }
 
 /*General Rules*/
@@ -127,6 +168,10 @@ body {
     height: 100vh;
     width: 100vw;
     align-items: center;
+    color-scheme: dark light;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
 }
 
 #bg-video {
@@ -148,9 +193,11 @@ nav {
     height: 20vh;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-shadow: 0px 0px 5px red;
+    position: relative;
+    margin-bottom: 3em;
 }
 /*Makes sure that the normal navbar and smaller navbar with all the links look the same*/
 .nav-left, .nav-connected {
@@ -266,6 +313,7 @@ will show up only when the user hovers on the NAV*/
     nav:hover .nav-connected, nav:focus .nav-connected {
         display: flex;
         flex-direction: column;
+        z-index: 5;
         position: absolute;
         top: 0;
         left: 0;
@@ -359,10 +407,13 @@ nav .nav--main-links:hover > ul > .item-3 {
     transform: translateY(var(--hover-item-3));
   }
 }
-/*Main content Rules */
+/*Main content Rules for home page */
+.home-main {
+    min-height: 60vh !important;
+}
 main {
+    padding: 0.25em;
     font-size: var(--font-size-main);
-    height: 60vh;
     width: 80vw;
     margin: 0 auto;
     display: flex;
@@ -388,6 +439,75 @@ main {
 .flyers {
   margin-right: 65vw;
   padding-bottom: 8vw;
+}
+/*Main rules for other pages*/
+main section {
+    height: 100%;
+    padding: 0.25em;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 5px blue, 0 0 10px darkblue, 0 0 15px black;
+    text-align: center;
+}
+main section .text {
+  max-width: 55%;
+}
+main section .section-img {
+  min-width: 40%;
+}
+main section .right {
+  order: 2;
+}
+main section .left {
+  order: 1;
+}
+main section h1 {
+  font-size: var(--f-800);
+}
+main section h2 {
+    font-size: var(--f-700);
+}
+main section :is(p, ul, ol) {
+  font-size: var(--f-500);
+}
+main section .section-img img {
+  min-width: 70%;
+  border-radius: 30%;
+}
+main section .section-img img.portrait {
+    max-width: 20%;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 856px) {
+  main section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+      min-height: 100
+  }
+  main section .text {
+    order: 2;
+  }
+  main section .section-img {
+    order: 1;
+  }
+  main section .text, main section .section-img {
+    min-width: 90%;
+  }
+  main section .section-img img {
+    min-width: 40%;
+  }
+}
+@media (max-width: 1125px) and (max-height: 870px) {
+  main section .section-img img {
+    max-width: 20%;
+  }
 }
 
 

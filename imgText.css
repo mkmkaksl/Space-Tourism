@@ -1,0 +1,76 @@
+main section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main section .section-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    min-width: 5em;
+    width: 6em;
+    max-width: 8em;
+    aspect-ratio: 1/1.2;
+    text-align: center;
+    padding: 0.5em;
+}
+@media (max-width: 856px) {
+    main section .section-img {
+        margin-bottom: 1em;
+    }
+}
+
+main section .section-img :is(a, p) {
+    z-index: 1;
+}
+
+.plan-of-work {
+    background: url("./Images/plan-of-work-log-snip.png") no-repeat center center;
+    background-size: cover;
+}
+
+.student-copyright {
+    background: url("./Images/copyrigt-checklist-snip.png") no-repeat center center;
+    background-size: cover;
+}
+
+.site-map {
+    background: url("./Images/site-map-snip.png") no-repeat center center;
+    background-size: cover;
+}
+
+.design-brief {
+    background: url("./Images/design-brief-snip.png") no-repeat center center;
+    background-size: cover;
+}
+
+main section .section-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color linear 300ms;
+}
+
+main section .section-img:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.membership {
+    background: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat center center;
+    background-size: cover;
+}
+
+.training {
+    background: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat center center;
+    background-size: cover;
+}
+
+.facility {
+    background: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat center center;
+    background-size: cover;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- TODO List:
+  -- Add the footer 
+  -- Finalize the homepage and create a template
+
+  
+  NEW COMMENT RIGHT HERE !!!
+  -- Nav bar dropdown inquiry: Whenever the user attempts to click on the link, all 3 links dissapear. I think this occurs due to there being a blank space between 3 of the links, so we should fix that!
+  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
+
+    <!-- Header with the nav bar and links -->
+
+    <header>
+
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html"
+                                class="active">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
+            </ul>
+
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+
+
+
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html"
+                                class="active">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Main text -->
+        <h1>Our success stories:</h1>
+        <section>
+            <div class="text right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sit id accusantium iste similique
+                    esse maiores nisi? Possimus, debitis reprehenderit tempora eveniet sed odio tenetur quae? At sunt
+                    delectus animi.
+                    Iste voluptatem minima aspernatur! Officia obcaecati nihil a tenetur sequi quia cum quos, labore
+                    magni. Repudiandae tempore, vitae nostrum quisquam provident maxime quam pariatur harum dignissimos
+                    veniam optio fuga. Enim.</p>
+            </div>
+            <div class="section-img left">
+                <img src="https://images.unsplash.com/photo-1541873676-a18131494184?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=718&q=80"
+                    alt="Astronaut standing on gray sand" class="portrait">
+            </div>
+        </section>
+        <section>
+            <div class="text left">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sit id accusantium iste similique
+                    esse maiores nisi? Possimus, debitis reprehenderit tempora eveniet sed odio tenetur quae? At sunt
+                    delectus animi.
+                    Iste voluptatem minima aspernatur! Officia obcaecati nihil a tenetur sequi quia cum quos, labore
+                    magni. Repudiandae tempore, vitae nostrum quisquam provident maxime quam pariatur harum dignissimos
+                    veniam optio fuga. Enim.</p>
+            </div>
+            <div class="section-img right">
+                <img src="https://images.unsplash.com/photo-1541873676-a18131494184?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=718&q=80"
+                    alt="Astronaut standing on gray sand" class="portrait">
+            </div>
+        </section>
+
+        <section>
+            <div class="text right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sit id accusantium iste similique
+                    esse maiores nisi? Possimus, debitis reprehenderit tempora eveniet sed odio tenetur quae? At sunt
+                    delectus animi.
+                    Iste voluptatem minima aspernatur! Officia obcaecati nihil a tenetur sequi quia cum quos, labore
+                    magni. Repudiandae tempore, vitae nostrum quisquam provident maxime quam pariatur harum dignissimos
+                    veniam optio fuga. Enim.</p>
+            </div>
+            <div class="section-img left">
+                <img src="https://images.unsplash.com/photo-1541873676-a18131494184?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=718&q=80"
+                    alt="Astronaut standing on gray sand" class="portrait">
+            </div>
+        </section>
+    </main>
+
+    <!-- Still need to add this based on our layout -->
+    <footer>
+
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
