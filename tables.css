@@ -1,0 +1,50 @@
+section table {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+section table thead{
+    background: url("./Images/starry-bg.jpg");
+}
+section table thead th {
+    padding: 0.4em;
+    border: 2px solid white;
+}
+section table tbody th {
+    background: url("./Images/starry-bg.jpg");
+    padding: 0.4em;
+    border: 2px solid white;
+}
+section table tbody td {
+    border: 2px solid white;
+}
+
+.table-red {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+.table-green {
+    background-color: rgba(0, 255, 0, 0.4);
+}
+
+@media (max-width: 728px) and (min-width: 538px) {
+    section table {
+        font-size: 0.9em;
+    }
+    section table :is(tbody, thead) :is(th, td) {
+        padding: 0.3em;
+    }
+}
+@media (max-width: 537px) and (min-width: 347px) {
+    section table {
+        font-size: 0.7em;
+    }
+    section table :is(tbody, thead) :is(th, td) {
+        padding: 0.2em;
+    }
+}
+@media (max-width: 346px) {
+    section table {
+        font-size: 0.4em;
+    }
+    section table :is(tbody, thead) :is(th, td) {
+        padding: 0.25em;
+    }
+}
