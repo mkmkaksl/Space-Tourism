@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/accordian.css">
+</head>
+
+<body>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
+
+    <!-- Header with the nav bar and links -->
+
+    <header>
+
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
+            </ul>
+
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+
+
+
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Main text -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Small Facility Contact(Japan)</button>
+            </div>
+            <div class="accordian-text">
+                <p><span class="bold">Email:</span> spacetrain_small@space.org</p>
+                <p><span class="bold">Phone_num:</span> +81 (070) 908-1992</p>
+                <p><span class="bold">Location:</span> Tokyo, Japan</p>
+            </div>
+        </div>
+
+        <!-- Medium Facility -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Medium Facility Contact(China)</button>
+            </div>
+            <div class="accordian-text">
+                <p><span class="bold">Email:</span> spacetrain_meduim@space.org</p>
+                <p><span class="bold">Phone_num:</span> +86 (167) 5543-3421</p>
+                <p><span class="bold">Location:</span> Beijing, China</p>
+            </div>
+        </div>
+
+        <!-- Large Facility -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Large Facility Contact(USA)</button>
+            </div>
+            <div class="accordian-text">
+                <p><span class="bold">Email:</span> spacetrain_large@space.org</p>
+                <p><span class="bold">Phone_num:</span> +1 (972) 009-1923</p>
+                <p><span class="bold">Location:</span> Dallas, Texas, United States of America.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+        <img src="./Images/TSA_logo.png" alt="Technology Student Association(TSA)">
+        <div class="footer--links">
+            <a href="contact.html">Contact Info</a>
+            <br>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
+    <script src="accordian.js"></script>
+
+</body>
+
+</html>

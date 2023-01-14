@@ -98,7 +98,6 @@ link: https://www.fontspace.com/astrobia-font-f31420
         --f-600: 1.4rem;
         --f-500: 1rem;
         --f-400: 0.8rem;
-
     }
 }
 @media (max-width: 650px) and (min-width: 481px) {
@@ -512,6 +511,41 @@ main section .section-img img.portrait {
   }
 }
 
+/*Footer*/
+footer {
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: auto;
+    text-align: center;
+    position: relative;
+}
+footer img {
+    min-width: 2em;
+    max-width: 8em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+footer .footer--links {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer--links a{
+    transition: color linear 500ms;
+}
+footer .footer--links a:hover {
+    color: #ddd;
+    cursor: pointer;
+}
+@media (max-width: 650px) {
+    footer img {
+        position: relative;
+    }
+}
 
 /*utility classes*/
 .flip-x {

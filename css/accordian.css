@@ -20,3 +20,8 @@
     overflow: hidden;
     transition: height linear 350ms, background-color linear 250ms;
 }
+@media (max-width: 966px) {
+    .accordian .accordian-title button{
+        font-size: 2rem;
+    }
+}
