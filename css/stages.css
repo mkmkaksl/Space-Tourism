@@ -1,0 +1,50 @@
+section.stages {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    background: url("../Images/starry-bg.jpg");
+}
+section.stages .stage-container {
+    width: 100%;
+    height: 100%;
+    border-right: 2px double white;
+}
+section.stages .stage-container:last-of-type {
+    border-right: none;
+}
+section.stages .stage {
+    padding: 0.25em;
+    height: 6em;
+    min-width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    border-style: double;
+    border-color: purple;
+}
+
+@media (max-width: 821px) {
+    section.stages {
+        flex-direction: column;
+    }
+    section.stages .stage-container {
+        width: 100%;
+        height: 100%;
+        border-right: none;
+        border-bottom: 2px double white;
+    }
+    section.stages .stage-container:last-of-type {
+        border-right: none;
+        border-bottom: none;
+    }
+    section.stages .stage {
+        min-width: 90%;
+    }
+}

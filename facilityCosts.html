@@ -10,87 +10,134 @@
   -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Tourism</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/accordian.css">
 </head>
 
 <body>
-  <!-- Sets the background video which is styled using CSS -->
-  <div class="bg-video">
-    <video id="bg-video" autoplay muted loop playsinline>
-      <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
-      <img src="./Images/earth.jpg" id="fallback-img">
-    </video>
-  </div>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
 
-  <!-- Header with the nav bar and links -->
+    <!-- Header with the nav bar and links -->
 
-  <header>
+    <header>
 
-    <nav>
-      <ul class="nav-left">
-        <li class="nav--main-links"><a class="active" href="index.html">Home</a></li>
-        <li class="nav--main-links"><a href="about.html">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="costs.html">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="stages.html">Stages</a></li>
-      </ul>
-      <ul class="nav-right">
-        <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
-      </ul>
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html" class="active">Facility
+                                Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
+            </ul>
 
-      <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
 
 
 
-      <ul class="nav-connected">
-        <li class="nav--main-links"><a class="active" href="index.html">Home</a></li>
-        <li class="nav--main-links"><a href="about.html">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="costs.html">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="stages.html">Stages</a></li>
-        <li class="nav--main-links"><a href="registration.html">Registration</a></li>
-      </ul>
-      <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
-    </nav>
-  </header>
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html" class="active">Facility
+                                Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
 
-  <main id="main">
-    <!-- Main text -->
+    <main id="main">
+        <!-- Main text -->
+        <!-- Accordians -->
+        <!-- Small Facility -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Small Facility</button>
+            </div>
+            <div class="accordian-text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt veritatis minus et excepturi id
+                    vero dolorem in modi, sint dicta soluta totam fugiat hic accusantium rerum quod ut, iure cum!
+                    Vitae veritatis blanditiis quos ipsam alias tempora iusto repellat pariatur culpa doloremque facilis
+                    dignissimos autem, tenetur ab, quo laudantium eligendi velit laboriosam molestiae. Sit nihil,
+                    perferendis aspernatur culpa debitis commodi.</p>
+            </div>
+        </div>
 
-  </main>
+        <!-- Medium Facility -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Medium Facility</button>
+            </div>
+            <div class="accordian-text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt veritatis minus et excepturi id
+                    vero dolorem in modi, sint dicta soluta totam fugiat hic accusantium rerum quod ut, iure cum!
+                    Vitae veritatis blanditiis quos ipsam alias tempora iusto repellat pariatur culpa doloremque facilis
+                    dignissimos autem, tenetur ab, quo laudantium eligendi velit laboriosam molestiae. Sit nihil,
+                    perferendis aspernatur culpa debitis commodi.</p>
+            </div>
+        </div>
 
-  <!-- Still need to add this based on our layout -->
-  <footer>
+        <!-- Large Facility -->
+        <div class="accordian">
+            <div class="accordian-title">
+                <button>Large Facility</button>
+            </div>
+            <div class="accordian-text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt veritatis minus et excepturi
+                    id
+                    vero dolorem in modi, sint dicta soluta totam fugiat hic accusantium rerum quod ut, iure cum!
+                    Vitae veritatis blanditiis quos ipsam alias tempora iusto repellat pariatur culpa doloremque
+                    facilis
+                    dignissimos autem, tenetur ab, quo laudantium eligendi velit laboriosam molestiae. Sit nihil,
+                    perferendis aspernatur culpa debitis commodi.</p>
+            </div>
+        </div>
+    </main>
 
-  </footer>
-  <!-- Links to JS file. Doesn't do anything yet -->
-  <script src="main.js"></script>
+    <!-- Still need to add this based on our layout -->
+    <footer>
+
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
+    <script src="accordian.js"></script>
 
 </body>
 

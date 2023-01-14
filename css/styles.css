@@ -1,0 +1,519 @@
+/*
+license: Freeware, Non-Commercial
+link: https://www.fontspace.com/astrobia-font-f31420
+*/
+/*Imports new font */
+@font-face {
+    font-family: "Astrobia";
+    src: url("../Fonts/Astrobia-K47W.ttf");
+    src: url("../Fonts/Astrobia-X8zg.otf");
+    font-weight: 400;
+    font-style: normal;
+} /* Font Astrobia demo version */
+
+/*Variables*/
+:root {
+  /*The font size of the nav links*/
+    --font-size-nav: 2rem;
+
+  /*The gap between each navbar link */
+    --nav-gap: 2em;
+
+  /*Navbar padding*/
+    --nav-padding: 0.7em;
+
+  /*Hover links distance moved down*/
+    --hover-item-1: 1em;
+    --hover-item-2: 3.5em;
+    --hover-item-3: 6em;
+
+  /*Main text font size*/
+    --f-800: 4rem;
+    --font-size-main: 3rem;
+    --f-700: 2rem;
+    --f-600: 1.5rem;
+    --f-500: 1.25rem;
+    --f-400: 1rem;
+  
+}
+
+/*Media Queries*/
+/*Media Query for screen between 1264 - 1583 px wide (inclusive)*/
+@media (max-width: 1583px) and (min-width: 1264px)
+{
+    :root {
+        --font-size-nav: 1.75rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+
+        --font-size-main: 2.5rem;
+    }
+}
+
+/*Media Query for screen between 1126 - 1263 px wide (inclusive)*/
+@media (max-width: 1263px) and (min-width: 1126px)
+{
+    :root {
+        --font-size-nav: 1.5rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+
+        --f-800: 3.5rem;
+        --font-size-main: 2.25rem;
+        --f-700: 1.75rem;
+        --f-600: 1.4rem;
+        --f-500: 1.15rem;
+        --f-400: 0.9rem;
+    }
+}
+
+/*Media Query for screen between 857 - 1125 px wide (inclusive)*/
+@media (max-width: 1125px) and (min-width: 857px)
+{
+    :root {
+        --font-size-nav: 1.5rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+
+        --f-800: 3rem;
+        --font-size-main: 1.75rem;
+        --f-700: 1.6rem;
+        --f-600: 1.4rem;
+        --f-500: 1rem;
+        --f-400: 0.8rem;
+    }
+}
+
+/*Media Query for screen between 651 - 856 px wide (inclusive)*/
+@media (max-width: 856px) and (min-width: 651px)
+{
+    :root {
+        --font-size-nav: 1.25rem;
+        --nav-gap: 1.5em;
+        --nav-padding: 0.6em;
+
+        --f-800: 2.9rem;
+        --font-size-main: 1.5rem;
+        --f-700: 1.6rem;
+        --f-600: 1.4rem;
+        --f-500: 1rem;
+        --f-400: 0.8rem;
+
+    }
+}
+@media (max-width: 650px) and (min-width: 481px) {
+  :root {
+    --font-size-nav: 1rem;
+    --nav-gap: 1.5em;
+
+    --f-800: 2.7rem;
+    --font-size-main: 1.25rem;
+        --f-700: 1.5rem;
+        --f-600: 1.3rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
+  }
+}
+@media (max-width: 480px) and (min-width: 361px) {
+  :root {
+    --font-size-nav: 0.8rem;
+    --nav-gap: 1.4em;
+
+    --f-800: 2.5rem;
+    --font-size-main: 1.2rem;
+        --f-700: 1.4rem;
+        --f-600: 1.2rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
+  }
+}
+/*Media Query for screen between 360 > px wide (inclusive)*/
+@media (max-width: 360px)
+{
+    :root {
+        --font-size-nav: 0.6rem;
+        --nav-gap: 1.3em;
+        --nav-padding: 0.5em;
+        --f-800: 2.3rem;
+        --font-size-main: 1rem;
+        --f-700: 1.4rem;
+        --f-600: 1.2rem;
+        --f-500: 0.9rem;
+        --f-400: 0.7rem;
+    }
+}
+
+
+/*Utility Classes*/
+.bold {
+    font-weight: bold;
+}
+.active {
+  color: yellow;
+  text-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
+}
+
+/*General Rules*/
+*, *::before, *::after {
+    font-family: Astrobia, monospace, sans-serif;
+    font-weight: light;
+    color: white;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    color-scheme: dark light;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+/*Nav bar rules */
+nav {
+    width: 80vw;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 5px red;
+    position: relative;
+    margin-bottom: 3em;
+}
+/*Makes sure that the normal navbar and smaller navbar with all the links look the same*/
+.nav-left, .nav-connected {
+    display: flex;
+    font-size: var(--font-size-nav);
+    gap: var(--nav-gap);
+    background: url("../Images/starry-bg.jpg");
+    object-fit: cover;
+    border: 4px solid #0062BD;
+    border-radius: 7em;
+    padding: var(--nav-padding);
+    position: relative;
+}
+.nav-right {
+    font-size: var(--font-size-nav);
+    background: url("../Images/starry-bg.jpg");
+    object-fit: cover;
+    border: 4px solid #0062BD;
+    border-radius: 7em;
+    padding: var(--nav-padding);
+    position: relative;
+}
+
+.nav--main-links {
+  position: relative;
+}
+
+.nav--hover-links {
+  display: none;
+  text-align: center;
+  
+}
+.nav--secondary-links {
+  padding: 0.8em;
+  width: max-content;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background: url("../Images/starry-bg.jpg");
+  transition: all linear 500ms;
+  z-index: 5;
+}
+
+
+/*This nav has all the links and will only show up 
+using the media query below on smaller devices*/
+.nav-connected {
+    display: none;
+    transition: height linear 500ms;
+}
+.three-line-sm-bar {
+    display: none;
+}
+
+/* Media query for small devices where the hyperlinks
+will show up only when the user hovers on the NAV*/
+@media (max-width: 1125px)
+{
+    :root {
+        --nav-gap: 1em;
+    }
+    .nav-left, .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        transition: display linear 500ms, height linear 500ms;
+    }
+    .nav-left a, .nav-right a {
+        width: max-content;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+    }
+    .nav-connected .nav--main-links {
+      position: relative;
+    }
+    .nav-connected .nav--hover-links {
+      position: absolute;
+      top: 0;
+      left: 120%;
+      z-index: 5;
+    }
+  
+  /*Makes sure only the nav bar shows up*/
+    nav {
+        width: 90vw;
+        margin: 0 auto;
+        height: 10vh;
+        border: 4px solid #0062BD;
+        border-radius: 7em;
+        background: url("../Images/starry-bg.jpg");
+        object-fit: cover;
+        display: flex;
+        justify-content: end;
+        padding: 30px;
+    }
+    nav .three-line-sm-bar {
+        display: inline;
+        width: 60px;
+        height: 50px;
+    }
+  /*When hovering on nav bar, make the nav and three lines disappear and the connected nav bar appear*/
+    nav:hover, :focus {
+        background: none;
+        border: none;
+    }
+    nav:hover .three-line-sm-bar, nav:focus .three-line-sm-bar {
+        display: none;
+    }
+    nav:hover .nav-connected, nav:focus .nav-connected {
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        gap: var(--nav-gap);
+    }
+
+
+    nav .nav-connected .nav--main-links:hover > ul > .item-1 {
+      animation: 50ms linear 1 forwards item-10;
+    }
+    nav .nav-connected .nav--main-links:hover > ul > .item-2 {
+      animation: 200ms linear 1 forwards item-20;
+    }
+    nav .nav-connected .nav--main-links:hover > ul > .item-3 {
+      animation: 400ms linear 1 forwards item-30;
+    }
+    @keyframes item-10 {
+      to {
+        transform: translateY(-0.5em);
+      }
+    }
+    @keyframes item-20 {
+      to {
+        transform: translateY(2em);
+      }
+    }
+    @keyframes item-30 {
+      to {
+        transform: translateY(4.5em);
+      }
+    }
+}
+nav li {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    position: relative;
+  /*Glowing shade on the links is due to this*/
+    text-shadow: 1px 1px 10px white,  3px 3px 10px #BBB;
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    background-color: white;
+    width: 0;
+    height: 10%;
+    transition: width linear 250ms;
+}
+nav a.active::before {
+  /*Color of the underline on the active link when you hover */
+  background-color: yellow;
+  box-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
+}
+nav a:hover::before, nav a:focus::before{
+    width: 100%;
+}
+
+nav .nav--main-links:hover > ul {
+  display: block;
+} 
+nav .nav--main-links:hover > ul > .item-1 {
+  animation: 100ms linear 1 forwards item-1;
+}
+nav .nav--main-links:hover > ul > .item-2 {
+  animation: 300ms linear 1 forwards item-2;
+}
+nav .nav--main-links:hover > ul > .item-3 {
+  animation: 500ms linear 1 forwards item-3;
+}
+@keyframes item-1 {
+  to {
+    transform: translateY(var(--hover-item-1));
+  }
+}
+@keyframes item-2 {
+  to {
+    transform: translateY(var(--hover-item-2));
+  }
+}
+@keyframes item-3 {
+  to {
+    transform: translateY(var(--hover-item-3));
+  }
+}
+/*Main content Rules for home page */
+.home-main {
+    min-height: 60vh !important;
+}
+main {
+    padding: 0.25em;
+    font-size: var(--font-size-main);
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 5px red;
+}
+
+#first-paragraph {
+    width: 60vw;
+    margin: 0;
+    align-self: start;
+}
+#second-paragraph {
+    width: 60vw;
+    margin: 0;
+    align-self: end;
+}
+#page-titles {
+  margin-top: 20vw;
+}
+.flyers {
+  margin-right: 65vw;
+  padding-bottom: 8vw;
+}
+/*Main rules for other pages*/
+main section {
+    height: 100%;
+    padding: 0.25em;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 5px blue, 0 0 10px darkblue, 0 0 15px black;
+    text-align: center;
+}
+main section .text {
+  max-width: 55%;
+}
+main section .section-img {
+  min-width: 40%;
+}
+main section .right {
+  order: 2;
+}
+main section .left {
+  order: 1;
+}
+main section h1 {
+  font-size: var(--f-800);
+}
+main section h2 {
+    font-size: var(--f-700);
+}
+main section :is(p, ul, ol) {
+  font-size: var(--f-500);
+}
+main section .section-img img {
+  min-width: 70%;
+  border-radius: 30%;
+}
+main section .section-img img.portrait {
+    max-width: 20%;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 856px) {
+  main section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+      min-height: 100
+  }
+  main section .text {
+    order: 2;
+  }
+  main section .section-img {
+    order: 1;
+  }
+  main section .text, main section .section-img {
+    min-width: 90%;
+  }
+  main section .section-img img {
+    min-width: 40%;
+  }
+}
+@media (max-width: 1125px) and (max-height: 870px) {
+  main section .section-img img {
+    max-width: 20%;
+  }
+}
+
+
+/*utility classes*/
+.flip-x {
+  transform: scaleX(-1);
+}

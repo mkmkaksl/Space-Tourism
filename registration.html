@@ -10,87 +10,128 @@
   -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Tourism</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/forms.css">
 </head>
 
 <body>
-  <!-- Sets the background video which is styled using CSS -->
-  <div class="bg-video">
-    <video id="bg-video" autoplay muted loop playsinline>
-      <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
-      <img src="./Images/earth.jpg" id="fallback-img">
-    </video>
-  </div>
+    <!-- Sets the background video which is styled using CSS -->
+    <div class="bg-video">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="./Videos/earth-rotating-video-flipped.mp4" type="video/mp4" onerror="fallback(parentNode)">
+            <img src="./Images/earth.jpg" id="fallback-img">
+        </video>
+    </div>
 
-  <!-- Header with the nav bar and links -->
+    <!-- Header with the nav bar and links -->
 
-  <header>
+    <header>
 
-    <nav>
-      <ul class="nav-left">
-        <li class="nav--main-links"><a class="active" href="index.html">Home</a></li>
-        <li class="nav--main-links"><a href="about.html">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="costs.html">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="stages.html">Stages</a></li>
-      </ul>
-      <ul class="nav-right">
-        <li class="nav-secondary-link"><a href="registration.html">Registration</a></li>
-      </ul>
+        <nav>
+            <ul class="nav-left">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="nav-secondary-link"><a href="registration.html" class="active">Registration</a></li>
+            </ul>
 
-      <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
+            <!-- The nav bar below is only visible in small screens. In small screens, we wanted all the links in one place so i created a seperate bar -->
 
 
 
-      <ul class="nav-connected">
-        <li class="nav--main-links"><a class="active" href="index.html">Home</a></li>
-        <li class="nav--main-links"><a href="about.html">About us</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
-            <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
-            <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="costs.html">Costs</a>
-          <ul class="nav--hover-links">
-            <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
-            <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
-            <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
-          </ul>
-        </li>
-        <li class="nav--main-links"><a href="stages.html">Stages</a></li>
-        <li class="nav--main-links"><a href="registration.html">Registration</a></li>
-      </ul>
-      <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
-    </nav>
-  </header>
+            <ul class="nav-connected">
+                <li class="nav--main-links"><a href="index.html">Home</a></li>
+                <li class="nav--main-links"><a href="about.html">About us</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="promotion.html">Promotion</a></li>
+                        <li class="nav--secondary-links item-2"><a href="documentation.html">Documentation</a></li>
+                        <li class="nav--secondary-links item-3"><a href="credibility.html">Credibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="costs.html">Costs</a>
+                    <ul class="nav--hover-links">
+                        <li class="nav--secondary-links item-1"><a href="membership.html">Membership Plans</a></li>
+                        <li class="nav--secondary-links item-2"><a href="trainingCosts.html">Training Costs</a></li>
+                        <li class="nav--secondary-links item-3"><a href="facilityCosts.html">Facility Costs</a></li>
+                    </ul>
+                </li>
+                <li class="nav--main-links"><a href="stages.html">Stages</a></li>
+                <li class="nav--main-links"><a href="registration.html" class="active">Registration</a></li>
+            </ul>
+            <img class="three-line-sm-bar" src="./Images/nav-three-line-button.PNG" />
+        </nav>
+    </header>
 
-  <main id="main">
-    <!-- Main text -->
+    <main id="main">
+        <!-- Main text -->
+        <section>
+            <div class="section-form">
+                <form netlify>
+                    <div class="form-item">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Name(First, Last)" required>
+                    </div>
 
-  </main>
+                    <div class="form-item">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
 
-  <!-- Still need to add this based on our layout -->
-  <footer>
+                    <div class="form-item">
+                        <label for="phone_num">Phone_num:</label>
+                        <input type="tel" name="phone_num" id="phone_num" placeholder="Phone Number:" required>
+                    </div>
 
-  </footer>
-  <!-- Links to JS file. Doesn't do anything yet -->
-  <script src="main.js"></script>
+                    <div class="form-item">
+                        <label for="plan">Plan: </label>
+                        <select id="plan" name="plan">
+                            <option>Bronze</option>
+                            <option>Silver</option>
+                            <option>Gold</option>
+                            <option selected>Platnium</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="tutor">Tutor: </label>
+                        <select id="tutor" name="tutor">
+                            <option>Lorem</option>
+                            <option>Ipsum</option>
+                            <option>Dolor</option>
+                            <option>Another</option>
+                        </select>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Still need to add this based on our layout -->
+    <footer>
+
+    </footer>
+    <!-- Links to JS file. Doesn't do anything yet -->
+    <script src="main.js"></script>
 
 </body>
 

@@ -1,0 +1,10 @@
+.bold {
+    font-weight: bold;
+}
+section .text {
+    text-align: left;
+    width: 60%;
+}
+section .section-img {
+    width: 35%;
+}
