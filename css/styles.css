@@ -10,6 +10,17 @@ link: https://www.fontspace.com/astrobia-font-f31420
     font-weight: 400;
     font-style: normal;
 } /* Font Astrobia demo version */
+/*
+﻿license: Freeware, Non-Commercial
+link: https://www.fontspace.com/demora-font-f66679
+*/
+/*Imports new font */
+@font-face {
+    font-family: "Demora";
+    src: url("../Fonts/Demora-w1Wr6.otf");
+    font-weight: 400;
+    font-style: normal;
+} /* Font Demora */
 
 /*Variables*/
 :root {
@@ -154,10 +165,13 @@ link: https://www.fontspace.com/astrobia-font-f31420
 
 /*General Rules*/
 *, *::before, *::after {
-    font-family: Astrobia, monospace, sans-serif;
+    font-family: Demora, monospace, sans-serif;
     font-weight: light;
     color: white;
     box-sizing: border-box;
+}
+input {
+    font-family: Astrobia;
 }
 html {
     scroll-behavior: smooth;
@@ -364,9 +378,8 @@ nav a {
 nav a::before {
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
     bottom: -1px;
+    right: 0;
     background-color: white;
     width: 0;
     height: 10%;
@@ -378,6 +391,8 @@ nav a.active::before {
   box-shadow: 1px 1px 5px white, 3px 3px 10px yellow;
 }
 nav a:hover::before, nav a:focus::before{
+    left: 0;
+    right: auto;
     width: 100%;
 }
 
@@ -428,11 +443,13 @@ main {
     width: 60vw;
     margin: 0;
     align-self: start;
+    font-family: Astrobia;
 }
 #second-paragraph {
     width: 60vw;
     margin: 0;
     align-self: end;
+    font-family: Astrobia;
 }
 #page-titles {
   margin-top: 20vw;
@@ -550,4 +567,7 @@ footer .footer--links a:hover {
 /*utility classes*/
 .flip-x {
   transform: scaleX(-1);
+}
+.number {
+    font-family: Astrobia;
 }
